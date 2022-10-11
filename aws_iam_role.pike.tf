@@ -1,7 +1,7 @@
 resource "aws_iam_role" "pike" {
-    name= var.role_name
-    description="Allows access to other AWS service resources that are required to operate clusters managed by EKS."
-    assume_role_policy = jsonencode(
+  name        = var.role_name
+  description = "Allows access to other AWS service resources that are required to operate clusters managed by EKS."
+  assume_role_policy = jsonencode(
     {
       Statement = [
         {
@@ -16,7 +16,7 @@ resource "aws_iam_role" "pike" {
     }
   )
 
-  tags=var.tags
+  tags = var.tags
 }
 
 
