@@ -104,29 +104,89 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:DeleteSecurityGroup",
                 "ec2:DeleteTags",
                 "ec2:DescribeAccountAttributes",
+                "ec2:DescribeKeyPairs",
+                "ec2:DescribeLaunchTemplateVersions",
+                "ec2:DescribeLaunchTemplates",
                 "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeRouteTables",
                 "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
                 "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress"
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:RunInstances"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": [
+                "eks:CreateAccessEntry",
+                "eks:CreateAddon",
+                "eks:CreateCluster",
+                "eks:CreateNodegroup",
+                "eks:CreatePodIdentityAssociation",
+                "eks:DeleteAddon",
+                "eks:DeleteCluster",
+                "eks:DeleteNodegroup",
+                "eks:DeletePodIdentityAssociation",
+                "eks:DescribeAddon",
+                "eks:DescribeAddonVersions",
+                "eks:DescribeCluster",
+                "eks:DescribeNodegroup",
+                "eks:ListTagsForResource",
+                "eks:ListUpdates",
+                "eks:TagResource",
+                "eks:UntagResource",
+                "eks:UpdateAddon",
+                "eks:UpdateClusterConfig",
+                "eks:UpdateNodegroupConfig",
+                "eks:UpdateNodegroupVersion"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AddRoleToInstanceProfile",
                 "iam:AttachRolePolicy",
                 "iam:CreateRole",
+                "iam:CreateServiceLinkedRole",
+                "iam:DeleteInstanceProfile",
                 "iam:DeleteRole",
                 "iam:DetachRolePolicy",
+                "iam:GetInstanceProfile",
                 "iam:GetRole",
                 "iam:ListAttachedRolePolicies",
                 "iam:ListInstanceProfilesForRole",
                 "iam:ListRolePolicies",
+                "iam:PassRole",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:TagInstanceProfile",
                 "iam:TagRole",
+                "iam:UntagRole",
                 "iam:UpdateRoleDescription"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "kms:CreateGrant",
+                "kms:DescribeKey"
+            ],
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
