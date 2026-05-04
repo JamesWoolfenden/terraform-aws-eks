@@ -1,4 +1,5 @@
 resource "aws_security_group" "pike" {
+  # checkov:skip=CKV_AWS_382: Unrestricted outbound access required for resource functionality
   # checkov:skip=CKV2_AWS_5: is connected
 
   description = "EKS created security group applied to ENI that is attached to EKS Control Plane master nodes, as well as any managed workloads."
