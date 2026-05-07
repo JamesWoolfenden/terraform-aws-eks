@@ -37,7 +37,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -47,7 +47,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_eks_addon.coredns](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_addon) | resource |
 | [aws_eks_addon.kube-proxy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_addon) | resource |
 | [aws_eks_addon.vpc-cni](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_addon) | resource |
@@ -64,12 +64,12 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | n/a | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
 | <a name="input_role_name"></a> [role\_name](#input\_role\_name) | (optional) describe your variable | `string` | n/a | yes |
-| <a name="input_sg-tags"></a> [sg-tags](#input\_sg-tags) | n/a | `map(any)` | <pre>{<br>  "Name": "eks-cluster-sg-pike-3440915",<br>  "kubernetes.io/cluster/pike": "owned"<br>}</pre> | no |
-| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | n/a | `list(string)` | <pre>[<br>  "subnet-09ff91b5b0adb1fd4",<br>  "subnet-05e87623a2a5c41f0",<br>  "subnet-043bb893867355740"<br>]</pre> | no |
+| <a name="input_sg-tags"></a> [sg-tags](#input\_sg-tags) | n/a | `map(any)` | <pre>{<br/>  "Name": "eks-cluster-sg-pike-3440915",<br/>  "kubernetes.io/cluster/pike": "owned"<br/>}</pre> | no |
+| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | n/a | `list(string)` | <pre>[<br/>  "subnet-09ff91b5b0adb1fd4",<br/>  "subnet-05e87623a2a5c41f0",<br/>  "subnet-043bb893867355740"<br/>]</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(any)` | n/a | yes |
 
 ## Outputs
